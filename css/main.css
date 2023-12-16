@@ -398,15 +398,18 @@ footer.page-footer .page-footer__sections .page-footer__section .download-androi
         width: 100%;
         justify-content: space-between;
         padding: 16px 10%;
+        gap: 16px;
     }
     header.page-header .logo {
         margin-right: 0;
+        transform: scale(0.8);
     }
     header.page-header nav {
         display: none;
     }
     header.page-header .try-android-studio {
         margin-left: 0;
+        transform: scale(0.8);
     }
     main section.content-chapter {
         flex-direction: column;
