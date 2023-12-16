@@ -399,6 +399,7 @@ footer.page-footer .page-footer__sections .page-footer__section .download-androi
         justify-content: space-between;
         padding: 16px 10%;
         gap: 16px;
+        z-index: 99;
     }
     header.page-header .logo {
         margin-right: 0;
