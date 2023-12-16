@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background: #FFFFFF;
+    background: radial-gradient(at top 70% left 55%, #FFFFFF, #657EE5 60%, #657EE5);
+}
+
+.background * {
+    position: absolute;
+}
+
+.grass div {
+	width: 0;
+	height: 0;
+    bottom: -190px;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-bottom: 50px solid #00FE00;
+    z-index: 10;
+}
+
+.grass :nth-child(1) {
+    left: 0px;
+}
+
+.grass :nth-child(2) {
+    left: 44px;
+}
+
+.grass :nth-child(3) {
+    left: 88px;
+}
+
+.grass :nth-child(4) {
+    left: 131px;
+}
+
+.mushroom {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+.mushroom .stem {
+	width: 30px;
+	height: 60px;
+    top: 20px;
+    left: 25px;
+	background: #D3CBC9;
+	border-radius: 30px / 60px;
+    border: 2px solid #5A1C21;
+    z-index: 5;
+}
+
+.mushroom .head {
+    width: 80px;
+    height: 40px;
+    background: radial-gradient(circle at left 60% bottom 60%, #dea9a9 0%,#5a1c21 70%,#5a1c21 100%);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    z-index: 6;
+}
+
+.mushroom_leaned {
+    transform: translateX(45px) translateY(10px) rotateZ(45deg) scale(0.7);
+    z-index: 7;
+}
+
+.butterfly {
+    height: 80px;
+    width: 80px;
+    left: 90px;
+    top: 40px;
+}
+
+.butterfly .body {
+	width: 15px;
+	height: 40px;
+	background: #D9BB2D;
+    border: 2px solid #868980;
+	border-radius: 15px / 40px;
+    top: 20px;
+    left: 25px;
+    transform: rotateZ(60deg);
+    z-index: 3;
+}
+
+.butterfly .head {
+	width: 15px;
+	height: 15px;
+	background: #D9BB2D;
+    border: 2px solid #868980;
+	border-radius: 50%;
+    top: 45px;
+    left: 5px;
+    z-index: 4;
+}
+
+.butterfly .head .eye {
+	width: 5px;
+	height: 5px;
+	background: #000000;
+	border-radius: 50%;
+}
+
+.butterfly .head .eye:nth-child(1) {
+    top: 4px;
+    left: 2px;
+}
+
+.butterfly .head .eye:nth-child(2) {
+    top: 8px;
+    left: 7px;
+}
+
+.butterfly .wing {
+	width: 15px;
+	height: 30px;
+	background: #6B86F9;
+    border: 2px solid #3852C0;
+	border-radius: 15px / 30px;
+}
+
+.butterfly .wing:nth-child(1) {
+    top: 14px;
+    left: 5px;
+    transform: rotateZ(115deg);
+    z-index: 5;
+}
+
+.butterfly .wing:nth-child(2) {
+    top: 3px;
+    left: 18px;
+    transform: rotateZ(170deg);
+    z-index: 4;
+}
+
+.butterfly .wing:nth-child(3) {
+    top: 47px;
+    left: 35px;
+    transform: rotateZ(165deg);
+    z-index: 2;
+}
+
+.butterfly .wing:nth-child(4) {
+    top: 38px;
+    left: 45px;
+    transform: rotateZ(130deg);
+    z-index: 1;
+}

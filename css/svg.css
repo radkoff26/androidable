@@ -1,0 +1,190 @@
+/* Common */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+:root {
+    --main-color: #0f0;
+}
+
+/* Picture */
+.picture-box {
+    height: 200px;
+    width: 200px;
+    border: 5px solid var(--main-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#picture {
+    width: 100%;
+    height: 100%;
+}
+
+#picture path {
+    transition: .7s;
+}
+
+#picture circle {
+    fill: var(--main-color);
+    opacity: 0;
+    transition: .5s;
+}
+
+.picture-box:hover #picture circle {
+    opacity: 1;
+    animation: circle_animation 2.5s infinite forwards ease-in-out;
+}
+
+.picture-box:active {
+    animation: .5s 7 shake_animation;
+}
+
+.picture-box:active #picture path {
+    fill: var(--main-color);
+}
+
+.picture-box .text {
+    height: fit-content;
+    width: 60%;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: var(--main-color);
+    text-align: right;
+    font-size: 30px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.picture-box:active .text {
+    opacity: 1;
+}
+
+.picture-box .android-image {
+    height: fit-content;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: .7s;
+}
+
+.picture-box:active .android-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animations */
+@keyframes shake_animation {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(15px) }
+    50% { transform: translateY(-15px) }
+    75% { transform: translateY(15px) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes circle_animation {
+    0% {
+        cx: 9.78729;
+        cy: 9;
+    }
+    36% {
+        cx: 9.78729;
+        cy: 0.272727;
+    }
+    52% {
+        cx: 12.7362;
+        cy: 0.272727;
+    }
+    53% {
+        cx: 13.4208;
+        cy: 0.272727;
+    }
+    54% {
+        cx: 13.9805;
+        cy: 0.396307;
+    }
+    55% {
+        cx: 14.4151;
+        cy: 0.643466;
+    }
+    56% {
+        cx: 14.8526;
+        cy: 0.887784;
+    }
+    57% {
+        cx: 15.1765;
+        cy: 1.218754;
+    }
+    58% {
+        cx: 15.3867;
+        cy: 1.63636;
+    }
+    59% {
+        cx: 15.5969;
+        cy: 2.05398;
+    }
+    60% {
+        cx: 15.7021;
+        cy: 2.51989;
+    }
+    61% {
+        cx: 15.7021;
+        cy: 3.03409;
+    }
+    62% {
+        cx: 15.7021;
+        cy: 3.5483;
+    }
+    63% {
+        cx: 15.5969;
+        cy: 4.01562;
+    }
+    64% {
+        cx: 15.3867;
+        cy: 4.43608;
+    }
+    65% {
+        cx: 15.1793;
+        cy: 4.85653;
+    }
+    66% {
+        cx: 14.8583;
+        cy: 5.19176;
+    }
+    67% {
+        cx: 14.4237;
+        cy: 5.44176;
+    }
+    68% {
+        cx: 13.989;
+        cy: 5.68892;
+    }
+    69% {
+        cx: 13.4322;
+        cy: 5.8125;
+    }
+    70% {
+        cx: 12.7532;
+        cy: 5.8125;
+    }
+    86% {
+        cx: 10.8441;
+        cy: 5.8125;
+    }
+    96% {
+        cx: 10.8441;
+        cy: 9;
+    }
+    100% {
+        cx: 9.78729;
+        cy: 9;
+    }
+}
