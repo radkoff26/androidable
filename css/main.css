@@ -325,7 +325,7 @@ footer.page-footer .page-footer__sections .page-footer__section .download-androi
     background-color: var(--font-color-on-primary);
     transform: translateX(-100%);
     transition: .7s;
-    z-index: 20;
+    z-index: 100;
 }
 
 .responsive-menu nav {
